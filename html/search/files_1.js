@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['looser_2eh',['Looser.h',['../_looser_8h.html',1,'']]]
+  ['exception_2eh',['Exception.h',['../_exception_8h.html',1,'']]]
 ];

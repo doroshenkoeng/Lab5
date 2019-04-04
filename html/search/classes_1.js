@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['looser',['Looser',['../class_looser.html',1,'']]]
+  ['exception',['Exception',['../class_exception.html',1,'']]]
 ];

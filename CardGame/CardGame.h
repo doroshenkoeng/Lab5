@@ -26,9 +26,9 @@ public:
 private:
 	//! Количество карт в колоде.
 	int mCardsNumber;
-	//! Указатель на  объект класса Player.
+	//! Указатель на  объект класса CardShark.
 	CardShark mPlayer1;
-	//! Указатель на  объект класса Player.
+	//! Указатель на  объект класса Looser.
 	Looser mPlayer2;
 
 };

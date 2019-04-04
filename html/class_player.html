@@ -80,8 +80,8 @@ $(function() {
  <div class="center">
   <img src="class_player.png" usemap="#Player_map" alt=""/>
   <map id="Player_map" name="Player_map">
-<area href="class_card_shark.html" alt="CardShark" shape="rect" coords="0,56,73,80"/>
-<area href="class_looser.html" alt="Looser" shape="rect" coords="83,56,156,80"/>
+<area href="class_card_shark.html" title="Класс шуллера." alt="CardShark" shape="rect" coords="0,56,73,80"/>
+<area href="class_looser.html" title="Класс лузера." alt="Looser" shape="rect" coords="83,56,156,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -109,11 +109,14 @@ $(function() {
 <tr class="memdesc:a51ac8081a83dd09521d23a68ef2cb722"><td class="mdescLeft">&#160;</td><td class="mdescRight">Геттер поля mSuperSkillMoveNumber.  <a href="#a51ac8081a83dd09521d23a68ef2cb722">Подробнее...</a><br /></td></tr>
 <tr class="separator:a51ac8081a83dd09521d23a68ef2cb722"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93598942c219c692431cff563c9a75c7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a93598942c219c692431cff563c9a75c7">operator++</a> ()=0</td></tr>
-<tr class="memdesc:a93598942c219c692431cff563c9a75c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перегрузка унарного префиксного оператора.  <a href="#a93598942c219c692431cff563c9a75c7">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:a93598942c219c692431cff563c9a75c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Виртуальный метод перегрузки унарного префиксного оператора.  <a href="#a93598942c219c692431cff563c9a75c7">Подробнее...</a><br /></td></tr>
 <tr class="separator:a93598942c219c692431cff563c9a75c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43dd105f55e9392a5f842b074d9c1653"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a43dd105f55e9392a5f842b074d9c1653">operator&lt;</a> (<a class="el" href="class_player.html">Player</a> *player)</td></tr>
 <tr class="memdesc:a43dd105f55e9392a5f842b074d9c1653"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перегрущка бинарного оператора.  <a href="#a43dd105f55e9392a5f842b074d9c1653">Подробнее...</a><br /></td></tr>
 <tr class="separator:a43dd105f55e9392a5f842b074d9c1653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a243ec6c0f4bec59c7b1d45b259d8b574"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a243ec6c0f4bec59c7b1d45b259d8b574">setCardsNumber</a> (int cardsNumber)</td></tr>
+<tr class="memdesc:a243ec6c0f4bec59c7b1d45b259d8b574"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сеттер кол-ва карт в колоде.  <a href="#a243ec6c0f4bec59c7b1d45b259d8b574">Подробнее...</a><br /></td></tr>
+<tr class="separator:a243ec6c0f4bec59c7b1d45b259d8b574"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Закрытые данные</h2></td></tr>
@@ -302,7 +305,7 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p>Перегрузка унарного префиксного оператора. </p>
+<p>Виртуальный метод перегрузки унарного префиксного оператора. </p>
 
 <p>Замещается в <a class="el" href="class_card_shark.html#a6a74d04f415562b00c7915feb75d1786">CardShark</a> и <a class="el" href="class_looser.html#a56f026d0b0dcd06f3101be53a8617e47">Looser</a>.</p>
 
@@ -330,6 +333,32 @@ $(function() {
     <tr><td class="paramname">1</td><td>Если кол-во баллов первого больше. </td></tr>
     <tr><td class="paramname">2</td><td>Если кол-во баллов второго больше. </td></tr>
     <tr><td class="paramname">0</td><td>Если кол-во баллов одинаково. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a243ec6c0f4bec59c7b1d45b259d8b574"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a243ec6c0f4bec59c7b1d45b259d8b574">&#9670;&nbsp;</a></span>setCardsNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::setCardsNumber </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cardsNumber</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сеттер кол-ва карт в колоде. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cardsNumber</td><td>Кол-во карт в колоде. </td></tr>
   </table>
   </dd>
 </dl>
@@ -434,7 +463,7 @@ $(function() {
 </div>
 </div>
 <hr/>Объявления и описания членов класса находятся в файле:<ul>
-<li>CardGame/<a class="el" href="_player_8h_source.html">Player.h</a></li>
+<li>D:/C++/Lab5/CardGame/<a class="el" href="_player_8h_source.html">Player.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

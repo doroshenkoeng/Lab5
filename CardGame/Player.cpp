@@ -1,6 +1,5 @@
 ﻿#include "Player.h"
 #include <cmath>
-#include <typeinfo>
 #include "CardShark.h"
 
 void Player::increment()

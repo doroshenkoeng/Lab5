@@ -42,8 +42,9 @@ TEST(CardGame, GetResult) {
 //! Тест унарного префиксного оператора.
 TEST(CardShark, OperatorIncrement) {
 	CardShark CardShark;
-	++CardShark;
-	ASSERT_EQ(1, CardShark.getCurrentScore());
+	++CardShark; 
+	ASSERT_LT(0, CardShark.getCurrentScore());
+	ASSERT_GT(3, CardShark.getCurrentScore());
 }
 
 //! Тест бинарного оператора сравнения.

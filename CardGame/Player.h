@@ -45,6 +45,10 @@ public:
 		\retval 0: Если кол-во баллов одинаково.
 	*/
 	int operator < (Player *player);
+	//! Сеттер кол-ва карт в колоде.
+	/*!
+		\param cardsNumber Кол-во карт в колоде.
+	*/
 	void setCardsNumber(int cardsNumber);
 private:
 	//! Колода карт

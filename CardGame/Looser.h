@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "Player.h"
+//! Класс лузера.
 class Looser :
 	public Player
 {

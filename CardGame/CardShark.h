@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "Looser.h"
+//! Класс шуллера.
 class CardShark :
 	public Player
 {
