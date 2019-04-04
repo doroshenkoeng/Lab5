@@ -39,5 +39,6 @@ int main() {
 		std::cout << "Second player won!";
 	}
 	else std::cout << "Nobody won!";
+	std::cout << "Hello world";
 	return 0;
 }
