@@ -42,7 +42,7 @@ int main() {
 		else if (result == 2)
 		{
 			std::cout << "Second player won!";
-		}
+		}		
 		else std::cout << "Nobody won!";
 	}
 	catch (Exception & e)

@@ -53,6 +53,7 @@ TEST(CardShark, OperatorLessThan) {
 	++cardShark;
 	ASSERT_EQ(1, cardShark < looser);
 }
+
 //! Тест оператора инкремент класса Looser.
 TEST(Looser, OperatorIncrement) {
 	Looser looser;
@@ -60,6 +61,20 @@ TEST(Looser, OperatorIncrement) {
 	ASSERT_LT(-1, looser.getCurrentScore());
 	ASSERT_GT(2, looser.getCurrentScore());
 }
+
+//! Тест сеттера класса Player.
+TEST(Player, setCardsNumber) {
+	CardShark cardShark;
+	cardShark.setCardsNumber(123);
+	ASSERT_EQ(123, cardShark.getCardsNumber());
+}
+
+//! Тест геттера класса Exception.
+TEST(Exception, getExceptionName) {
+	Exception exception("ERROR");
+	ASSERT_STREQ("ERROR", exception.getExceptionName().c_str());
+}
+
 
 int main(int argc, char ** argv)
 {
