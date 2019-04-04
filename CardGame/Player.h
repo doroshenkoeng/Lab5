@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include <vector>
 #include <random>
+#include "Exception.h"
 //! Класс игрока
 class Player
 {
@@ -44,6 +45,7 @@ public:
 		\retval 0: Если кол-во баллов одинаково.
 	*/
 	int operator < (Player *player);
+	void setCardsNumber(int cardsNumber);
 private:
 	//! Колода карт
 	std::vector<int> mDeck;

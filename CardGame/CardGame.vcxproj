@@ -120,6 +120,7 @@
   <ItemGroup>
     <ClCompile Include="CardGame.cpp" />
     <ClCompile Include="CardShark.cpp" />
+    <ClCompile Include="Exception.cpp" />
     <ClCompile Include="Looser.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -127,6 +128,7 @@
   <ItemGroup>
     <ClInclude Include="CardGame.h" />
     <ClInclude Include="CardShark.h" />
+    <ClInclude Include="Exception.h" />
     <ClInclude Include="Looser.h" />
     <ClInclude Include="Player.h" />
   </ItemGroup>

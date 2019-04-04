@@ -2,6 +2,8 @@
 #include "CardGame.h"
 #include "CardShark.h"
 #include "Looser.h"
+#include "Exception.h"
+
 /*!
 	\mainpage Лабораторная работа №4
 	\section taskname Полиморфизм. Виртуальные функции
@@ -25,20 +27,28 @@
 
 */
 int main() {
-	CardShark player1;
-	Looser player2;
-	CardGame game(player1, player2);
-	game.startGame();
-	int result = game.getResult();
-	if (result == 1)
+	try
 	{
-		std::cout << "First player won!";
+		CardShark player1;
+		Looser player2;
+		player1.setCardsNumber(-1);
+		CardGame game(player1, player2);
+		game.startGame();
+		int result = game.getResult();
+		if (result == 1)
+		{
+			std::cout << "First player won!";
+		}
+		else if (result == 2)
+		{
+			std::cout << "Second player won!";
+		}
+		else std::cout << "Nobody won!";
 	}
-	else if (result == 2)
+	catch (Exception & e)
 	{
-		std::cout << "Second player won!";
+		std::cout << e.getExceptionName();
 	}
-	else std::cout << "Nobody won!";
-	std::cout << "Hello world";
+
 	return 0;
 }
