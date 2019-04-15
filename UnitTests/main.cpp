@@ -76,6 +76,19 @@ TEST(Exception, getExceptionName) {
 	ASSERT_STREQ("ERROR", exception.getExceptionName().c_str());
 }
 
+//! Тест метода startChampionship класса CardGame.
+TEST(CardGame, startChampionship) {
+	int n = 3;
+	std::vector<CardShark> player1(n);
+	std::vector<Looser> player2(n);
+	CardGame game(player1, player2);
+	game.startChampionship();
+	for (int i = 0; i < 2*n; i++)
+	{
+		ASSERT_LT(-1, game.getResultTable(i));
+		ASSERT_GT(n+1, game.getResultTable(i));
+	}
+}
 
 int main(int argc, char ** argv)
 {

@@ -5,9 +5,8 @@
 #include "Exception.h"
 
 /*!
-	\mainpage Лабораторная работа №5
-	\section taskname Обработка ошибочных ситуаций. Исключения
-
+	\mainpage Лабораторная работа №6
+	\section taskname STL. Структуры данных
 	\author Дорошенко Сергей Э-23
 	\version 
 	\date Апрель, 2019
@@ -17,29 +16,24 @@
 
 	\subsection goal Цель работы:
 
-	Изучить механизмы, способы вызова и обработки исключений языка С++.
+	Научиться использовать структуры данных и алгоритмы стандартной библиотеки шаблонов.
 	\subsection variant Вариант 10
 	
-	Использовать исключение для обработки ошибочной ситуации в методе setCardsNumber().
-*/
+	В класс CardGame, добавить контейнер вектор, хранящий все игры проведенные между двумя игроками. 
+	Добавить метод сортировки контейнера по возрастанию количества побед первого игрока.*/
 int main() {
 	try
 	{
-		CardShark player1;
-		Looser player2;
-		player1.setCardsNumber(-1);
+		int n = 3;
+		std::vector<CardShark> player1(n);
+		std::vector<Looser> player2(n);
 		CardGame game(player1, player2);
-		game.startGame();
-		int result = game.getResult();
-		if (result == 1)
+		game.startChampionship();
+		game.sortResultTable();
+		for (int i = 0; i < 2*n; i++)
 		{
-			std::cout << "First player won!";
+			std::cout << i + 1 << ' ' << game.getResultTable(i) << std::endl;
 		}
-		else if (result == 2)
-		{
-			std::cout << "Second player won!";
-		}		
-		else std::cout << "Nobody won!";
 	}
 	catch (Exception & e)
 	{

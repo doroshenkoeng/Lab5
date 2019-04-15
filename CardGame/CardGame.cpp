@@ -7,6 +7,14 @@ CardGame::CardGame(CardShark & player1, Looser & player2)
 	mCardsNumber = player1.getCardsNumber();
 }
 
+CardGame::CardGame(std::vector<CardShark>& players1, std::vector<Looser>& players2)
+{
+	mPlayers1 = players1;
+	mPlayers2 = players2;
+	mResultTable.resize(2 * players1.size());
+	mPlayersNumber = players1.size();
+}
+
 void CardGame::startGame()
 {
 	for (int i = 0; i < mCardsNumber; i++) {
@@ -23,9 +31,42 @@ void CardGame::startGame()
 	}
 }
 
+void CardGame::startChampionship()
+{
+	for (int i = 0; i < mPlayersNumber; i++)
+	{
+		for (int j = mPlayersNumber; j < 2* mPlayersNumber; j++)
+		{
+			CardGame game(mPlayers1[i], mPlayers2[j- mPlayersNumber]);
+			game.startGame();
+			if (game.getResult()==1)
+			{
+				mResultTable[i]++;
+				if (mResultTable[j] > 0) mResultTable[j]--;
+			}
+			else if (game.getResult() == 2)
+			{
+				mResultTable[j]++;
+				if (mResultTable[i] > 0) mResultTable[i]--;
+			}
+		}
+
+	}
+}
+
 int CardGame::getResult()
 {
 	return mPlayer1 < mPlayer2;
+}
+
+void CardGame::sortResultTable()
+{
+	std::sort(mResultTable.begin(), mResultTable.end(), std::greater<>());
+}
+
+int CardGame::getResultTable(int i)
+{
+	return mResultTable[i];
 }
 
 

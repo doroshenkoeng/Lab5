@@ -27,10 +27,10 @@
     <ClCompile Include="..\CardGame\CardShark.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="..\CardGame\CardGame.cpp">
+    <ClCompile Include="..\CardGame\Exception.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="..\CardGame\Exception.cpp">
+    <ClCompile Include="..\CardGame\CardGame.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
