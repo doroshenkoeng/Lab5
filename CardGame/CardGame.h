@@ -2,6 +2,8 @@
 #include "Player.h"
 #include "CardShark.h"
 #include "Looser.h"
+#include <algorithm>
+#include <sstream>
 
 //! Класс игры
 class CardGame
@@ -39,6 +41,11 @@ public:
 		\param i Индекс игрока в таблице результатов.
 	*/
 	int getResultTable(int i);
+	//! Метод, для вывода таблицы результатов.
+	/*!
+		\return Таблица баллов игроков.
+	*/
+	std::string toString();
 private:
 	//! Количество карт в колоде.
 	int mCardsNumber;

@@ -61,12 +61,20 @@ int CardGame::getResult()
 
 void CardGame::sortResultTable()
 {
-	std::sort(mResultTable.begin(), mResultTable.end(), std::greater<>());
+	std::sort(mResultTable.begin(), mResultTable.end());
+	std::reverse(mResultTable.begin(), mResultTable.end());
 }
 
 int CardGame::getResultTable(int i)
 {
 	return mResultTable[i];
+}
+
+std::string CardGame::toString()
+{
+	std::stringstream str;
+	for (auto i : mResultTable) str << i << "\n";
+	return str.str();
 }
 
 

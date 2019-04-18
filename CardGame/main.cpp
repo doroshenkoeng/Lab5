@@ -30,10 +30,7 @@ int main() {
 		CardGame game(player1, player2);
 		game.startChampionship();
 		game.sortResultTable();
-		for (int i = 0; i < 2*n; i++)
-		{
-			std::cout << i + 1 << ' ' << game.getResultTable(i) << std::endl;
-		}
+		std::cout << game.toString();
 	}
 	catch (Exception & e)
 	{
